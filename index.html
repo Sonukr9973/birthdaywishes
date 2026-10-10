@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Little Birthday Surprise for Reena Didi 💗</title>
+<meta name="description" content="A tiny world of pink magic, sweet wishes, beautiful memories, and birthday surprises made just for you. 🎂✨">
+<meta property="og:type" content="website">
+<meta property="og:title" content="A Little Birthday Surprise for Reena Didi 💗">
+<meta property="og:description" content="A tiny world of pink magic, sweet wishes, beautiful memories, and birthday surprises made just for you. 🎂✨">
+<!-- After deploying, replace YOUR-SITE-URL with your real URL (see README) -->
+<meta property="og:url" content="https://YOUR-SITE-URL/">
+<meta property="og:image" content="https://YOUR-SITE-URL/assets/preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="flash" aria-hidden="true"></div>
+<div id="balloons" aria-hidden="true"></div>
+
+<section id="intro">
+  <div class="heart-glow" aria-hidden="true">💌</div>
+  <h1>Hey, {{name}}... 💗</h1>
+  <p>I made a little something for you.</p>
+  <p>Today is special, because someone as wonderful as you deserves a beautiful surprise. ✨</p>
+  <button class="btn big" id="openBtn">OPEN YOUR SURPRISE 🎁</button>
+</section>
+
+<main id="surprise" hidden>
+  <section id="hero">
+    <div class="cake" id="cakeHero"></div>
+    <h1 id="title" aria-live="polite"></h1>
+    <p class="tag rv">Today, the world became a little more beautiful because you were born.</p>
+    <p class="tag rv d2 script">Here's a little surprise made especially for you. 🌸</p>
+    <a class="btn" href="#wishmsg">Keep scrolling ↓</a>
+  </section>
+
+  <section id="wishmsg">
+    <h2>A Little Wish for Someone Special 💌</h2>
+    <div class="glass rv"><p id="msg" class="pre"></p></div>
+  </section>
+
+  <section id="gallery">
+    <h2>Memories & Smiles 📸</h2>
+    <div id="track" tabindex="0" aria-label="Photo gallery"></div>
+    <p class="hint">Tap a photo to see it bigger 💗</p>
+  </section>
+
+  <section id="cakeSec">
+    <h2>Make a Wish 🎂</h2>
+    <div class="cake" id="cakeWish"></div>
+    <button class="btn" id="wishBtn">MAKE A WISH ✨</button>
+    <p id="wish1" class="script big-s"></p>
+    <p id="wish2" class="tag"></p>
+  </section>
+
+  <section id="letterSec">
+    <h2>Wait... One Last Little Surprise! 💗</h2>
+    <div class="env" id="env" aria-hidden="true"><div class="flap"></div><div class="seal">💗</div></div>
+    <button class="btn" id="letterBtn" aria-expanded="false">OPEN THIS LITTLE LETTER 💌</button>
+    <div class="letter" id="letter"><p id="letterText" class="pre"></p></div>
+  </section>
+
+  <section id="final">
+    <div class="cake" id="cakeFinal"></div>
+    <h1>Once Again, Happy Birthday, {{name}}! 🎂💖</h1>
+    <p class="tag">May your year be filled with magic, laughter, love, and unforgettable memories. ✨</p>
+    <div class="row">
+      <button class="btn" id="replayBtn">🔁 Replay the surprise</button>
+      <button class="btn" id="musicBtn2">🎵 Play / Pause music</button>
+      <button class="btn" id="topBtn">⬆ Back to the beginning</button>
+      <button class="btn" id="shareBtn">💌 Share</button>
+    </div>
+    <p id="shareNote" class="hint" role="status"></p>
+  </section>
+</main>
+
+<div class="player" id="player" hidden>
+  <button id="playBtn" aria-label="Play music"><span class="disc" id="disc">💿</span></button>
+  <div class="meta"><b id="songTitle"></b><small id="songArtist"></small><i class="bar"><u id="prog"></u></i></div>
+  <span class="eq" id="eq" aria-hidden="true"><s></s><s></s><s></s><s></s></span>
+  <button id="muteBtn" aria-label="Mute">🔊</button>
+</div>
+<audio id="audio" preload="none" loop></audio>
+
+<div class="lb" id="lb" hidden role="dialog" aria-label="Photo viewer">
+  <button class="x" id="lbClose" aria-label="Close">✕</button>
+  <button class="nav" id="lbPrev" aria-label="Previous photo">‹</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="nav" id="lbNext" aria-label="Next photo">›</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
